@@ -17,7 +17,8 @@ class Song
     artist.add_song(self)
   end
 
-  def self.new_by_filename(song)
-
+  def self.new_by_filename(filename)
+    filename.split(" - ")
+    self.new
   end
 end

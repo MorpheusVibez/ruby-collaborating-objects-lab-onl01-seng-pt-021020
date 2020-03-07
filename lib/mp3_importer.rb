@@ -11,6 +11,10 @@ class MP3Importer
     @files.delete_if {|file| file == "." || file == ".."}
   end
 
+  def import
+    
+  end
+
   # def import
   #   files.each {|song| Song.new_by_filename(song)}
   # end

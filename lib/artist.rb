@@ -14,7 +14,7 @@ class Artist
 
   def add_song(song)
   @songs << song
-  end
+  ends
 
   def songs
     Song.all.select {|song| song.artist == self}
@@ -31,8 +31,8 @@ class Artist
   end
 
   def print_songs
-    add_song(songs).each do |song|
-      puts song.name
-    end
+    # add_song(songs).each do |song|
+    #   puts song.name
+    # end
   end
 end

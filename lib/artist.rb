@@ -30,7 +30,7 @@ class Artist
   end
 
   def print_songs
-    add_song(song).each do |song|
+    add_song(songs).each do |song|
       puts song.name
     end
   end

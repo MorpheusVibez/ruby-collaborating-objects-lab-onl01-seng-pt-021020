@@ -20,11 +20,14 @@ class Artist
   end
 
   def self.find_or_create_by_name(artist_name)
-    if (self.artist_name.nil?)
-      self.artist_name = Artist.new(artist_name)
+    artist = self.all.find {|artist| artist.name == artist_name}
+    if artist
+      artist
     else
-      self.artist_name.name = artist_name
+      new_artist = self.new(artist_name)
+      new_artist
     end
+  
   end
 
 end

@@ -4,7 +4,7 @@ class Artist
 
   def initialize(name)
     @name = name
-    
+
     @@all << self
   end
 
@@ -34,5 +34,4 @@ class Artist
     # add_song(songs).each do |song|
     #   puts song.name
     # end
-  end
 end

@@ -12,11 +12,11 @@ class Artist
   end
 
   def add_song(song)
-    !song.artist = self
+    song.artist = self
   end
 
   def songs
-    Song.all.select {|song| song.artist = self}
+    Song.all.select {|song| song.artist = self}.uniq
   end
 
 end

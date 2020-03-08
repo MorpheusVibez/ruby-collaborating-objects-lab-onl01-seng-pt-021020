@@ -1,3 +1,4 @@
+require "pry"
 class Song
   attr_accessor :name, :artist, :artist_name
 
@@ -21,6 +22,7 @@ class Song
     self.artist = Artist.find_or_create_by_name(name)
     self.artist.add_song(self)
     self.artist
+    binding.pry
   end
 
   def self.new_by_filename(filename)

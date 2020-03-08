@@ -23,6 +23,6 @@ class Song
 
   def self.new_by_filename(filename)
     files = filename.split(" - ")
-    self.new(files)
+    self.new(files[1])
   end
 end

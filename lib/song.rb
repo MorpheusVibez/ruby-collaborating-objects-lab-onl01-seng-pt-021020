@@ -22,9 +22,9 @@ class Song
     self.artist = Artist.find_or_create_by_name(name)
     self.artist.add_song(self)
     self.artist
-    binding.pry
-  end
 
+  end
+binding.pry
   def self.new_by_filename(filename)
     files = filename.split(" - ")
     song = self.new(files[1])

@@ -26,6 +26,6 @@ class Song
     song = self.new(files[1])
     artist = Artist.find_or_create_by_name(files[0])
     song.artist = artist
-    artist.add_song(song)
+    
   end
 end

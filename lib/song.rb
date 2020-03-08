@@ -17,14 +17,13 @@ class Song
   def self.all
     @@all
   end
-
+binding.pry
   def artist_name(name)
     self.artist = Artist.find_or_create_by_name(name)
     self.artist.add_song(self)
     self.artist
-
   end
-binding.pry
+
   def self.new_by_filename(filename)
     files = filename.split(" - ")
     song = self.new(files[1])
